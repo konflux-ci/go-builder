@@ -7,7 +7,7 @@ ARG GO_VERSION=1.23.2
 # yum-builddep --enablerepo ubi-9-appstream-source golang
 # rpmbuild -bs SPECS/…
 
-FROM registry.access.redhat.com/ubi9/ubi@sha256:ee0b908e958a1822afc57e5d386d1ea128eebe492cb2e01b6903ee19c133ea75
+FROM registry.access.redhat.com/ubi9/ubi@sha256:3816d303e75dec4da2d10eeb9e8651eef4393721598bea4690c607282635aa57
 WORKDIR /root/rpmbuild
 RUN dnf install -y make dnf-utils rpm-build golang
 RUN yum-builddep -y --enablerepo ubi-9-appstream-source golang
